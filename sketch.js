@@ -178,10 +178,12 @@ function draw() {
 }
 
 function keyPressed() {
-  if (key === "S") {
-    let bird = findBestBird();
-    saveJSON(bird.brain, "best_bird.json");
-  } else if (key === " ") {
+  //option to save the best bird
+  // if (key === "S") {
+  //   let bird = findBestBird();
+  //   saveJSON(bird.brain, "best_bird.json");
+  // } else
+  if (key === " ") {
     for (let bird of birds) {
       if (bird.playerControl) {
         bird.up();
