@@ -15,6 +15,7 @@ let playBest = false;
 let playerPlay = false;
 let playerPlayAI = false;
 let brainJSON;
+let generation = 0;
 
 function setup() {
   createCanvas(WIDTH, HEIGHT);
@@ -169,8 +170,11 @@ function draw() {
   let best = findBestBird();
   if (best) {
     fill(255);
-    text(`Score ${best.score}`, WIDTH / 2.0, 20);
+    text(`Score ${best.score}`, WIDTH / 2.0, 60);
   }
+  fill(255);
+  text(`Generation ${generation}`, WIDTH / 2.0, 20);
+  text(`Alive ${birds.length}`, WIDTH / 2.0, 40);
 }
 
 function keyPressed() {
